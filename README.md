@@ -6,7 +6,7 @@
 <div align='center'>
 
 ``` ocaml
-PLATAFORMA DE ANALISIS PROBABILISTICO PARA LA PREDICCIÓN TEMPRANA DEL CARCINOMA PULMONAR
+PLATAFORMA DE ANALISIS PROBABILISTICO PARA LA PREDICCION TEMPRANA DEL CARCINOMA PULMONAR
 ```
 
 </div>
@@ -105,7 +105,9 @@ git clone --single-branch --branch <Nombre de la rama> https://github.com/lord-o
 
 #### ACTIVA EL ENTORNO VIRTUAL
 ``` bash
-# Tanto ML como WEB tienen su enotorno virtual propio, por lo que los entornos deben ser creados en esas carpetas y no en la carpeta raíz del proyecto.
+# Tanto ML como WEB tienen su enotorno virtual propio,
+# Cada entorno ha de ser creado y activado en su respectiva carpeta.
+
 python -m venv venv
 venv\Scripts\Activate
 ```
