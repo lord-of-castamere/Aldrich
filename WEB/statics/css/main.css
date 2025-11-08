@@ -1,0 +1,95 @@
+
+/* -- CSS ------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'GemunuLibre';
+    src: url('../fonts/GemunuLibre/GemunuLibre.ttf') format('truetype-variations');
+    font-weight: 100 900; font-display: swap;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+
+:root {
+
+    /* Colores... */
+    --text-color: #22212D;
+    --canvas-color: #FDFDFD;
+    --background-color: #F6F8F8;
+
+    --color-info: #81A4CD;
+    --color-alert: #EE6352;
+    --color-danger: #A22522;
+    --color-success: #798478;
+
+    --state-idle: #CCDBDC;
+    --state-hover: #A5C4D4;
+    --state-active: #2596be;
+    --state-inactive: #C5CACB;
+
+    /* Tamaños... */
+    --sidebar-width-closed: 8rem;
+    --sidebar-width-open: 20rem;
+
+}
+
+.dark { /* Tema oscuro */
+    --text-color: #D4D3DE;
+    --canvas-color: #22212d;
+    --background-color: #181721;
+}
+
+.justifiEd-text {
+    hyphens: auto;
+    text-wrap: pretty;
+    text-align: justify;
+    hyphenate-limit-chars: 7;
+}
+
+/* -------------------------------------------------------------------------- */
+
+* {
+    user-select: none;
+    box-sizing: border-box;
+    transition: all .24s ease-in-out;
+    interpolate-size: allow-keywords;
+
+    color: var(--text-color);
+    font-family: 'GemunuLibre', sans-serif;
+}
+
+html, body {
+    display: flex;
+    min-width: 100dvw;
+    min-height: 100dvh;
+    margin: 0; padding: 0;
+
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    background-color: var(--background-color);
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+button {
+    cursor: pointer;
+    border: none; outline: none;
+    box-shadow: none; background: none;
+}
+
+textarea {
+    field-sizing: content;
+}
+
+/* -------------------------------------------------------------------------- */
