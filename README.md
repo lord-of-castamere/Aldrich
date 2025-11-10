@@ -140,9 +140,9 @@ Este listado representa el estado de desarrollo del proyecto, de manera sencilla
 
 <br>
 
-* [ ] Pre-procesamiento de datos (Pendiente)
-* [ ] Entrenamiento y evaluación de modelos - ML (Pendiente)
-* [ ] Desarrollo de aplicación WEB (Pendiente)
+* [x] Pre-procesamiento de datos (Completado)
+* [x] Entrenamiento y evaluación de modelos - ML (Completado)
+* [ ] Desarrollo de aplicación WEB (En progreso...)
 
 <br>
 

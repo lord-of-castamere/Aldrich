@@ -42,3 +42,7 @@ migrations/
 # Archivos del sistema
 .DS_Store
 Thumbs.db
+
+# Archivos de Notebook (Jupyter)
+.ipynb_checkpoints/
+# *.ipynb
