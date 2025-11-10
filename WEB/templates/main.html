@@ -1,0 +1,61 @@
+
+<!-- ----------------------------------------------------------------------- -->
+
+{% load static %}
+
+<!DOCTYPE html>
+
+<!-- ----------------------------------------------------------------------- -->
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='author' content='Ed Rubio' />
+    <meta name='description' content='Evaluación de segundo parcial' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+    <title>{% block title %}{% endblock title %} | ECBD</title>
+    <link rel='shortcut icon' type='image/png' href='{% static "images/favicon.png" %}'>
+
+    <link href='{% static "css/main.css" %}' rel='stylesheet' />
+
+    <!-- Estilos/Scripts únicos de una determinada plantilla. -->
+    {% block scripts %}{% endblock scripts %}
+    {% block stylesheet %}{% endblock stylesheet %}
+
+    <!-- Google Icons CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<!-- ----------------------------------------------------------------------- -->
+
+<body>
+
+<main class='main-content'>
+    <header class='main-header'>
+
+        <div class='main-header-tittle'>
+            <h2>PREDICCIÓN DE CÁNCER DE PULMÓN</h2></div>
+
+        <div class='main-header-user-area'>
+            <strong>Ed Rubio</strong>
+            <a class='main-header-user-info' href='https://github.com/lord-of-castamere'>
+                <span class='material-symbols-outlined'>folder_code</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenido a mostrar en cada plantilla. -->
+    <section class='main-container'>
+        {% block content %}{% endblock content %}
+    </section>
+
+    <!-- Contenido de información (Footer). -->
+    <footer class='main-footer'>
+        <p>Extracción de conocimientos en base de datos ⎯ Ed Rubio</p>
+    </footer>
+</main>
+
+</body>
+</html>
+
+<!-- ----------------------------------------------------------------------- -->

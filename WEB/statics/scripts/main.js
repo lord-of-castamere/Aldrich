@@ -2,17 +2,13 @@
 /* -- SCRIPTS --------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const resultado = document.getElementById('resultado');
 
-    /** Comportamiento del SIDEBAR */
-    const toggleButton = document.getElementById('toggle-main-sidebar');
-    const sidebarContainer = document.querySelector('.main-sidebar-container');
-    // const mainContent = document.querySelector('.main-content');
-
-    if (toggleButton && sidebarContainer) {
-        toggleButton.addEventListener('click', () => {
-            sidebarContainer.classList.toggle('is-open');
-        });
-    }
+        if (resultado) {
+            resultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, 300);
 });
 
 /* -------------------------------------------------------------------------- */

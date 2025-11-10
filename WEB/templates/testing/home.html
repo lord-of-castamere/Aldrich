@@ -1,0 +1,149 @@
+
+<!-- ----------------------------------------------------------------------- -->
+
+{% extends 'main.html' %}{% load static %}
+{% block title %}Evaluación{% endblock %}
+
+{% block stylesheet %}
+    <link href='{% static "css/testing.css" %}' rel='stylesheet' />
+{% endblock stylesheet %}
+
+{% block scripts %}
+    <script src='{% static "scripts/main.js" %}'></script>
+{% endblock scripts %}
+
+<!-- ----------------------------------------------------------------------- -->
+
+{% block content %}
+<div class='card-panel'>
+
+    <form method='POST' action=''>{% csrf_token %}
+    <div class='form-layout'>            
+        
+        <div class='column'>
+            <h4>Datos del Paciente</h4>
+            <div class='input-group'>
+                <label for='AGE'>Edad</label>
+                <input type='number' id='AGE' name='AGE' min='18' max='100' required>
+            </div>
+            <div class='input-group'>
+                <label for='GENDER'>Género</label>
+                <select id='GENDER' name='GENDER' required>
+                    <option value='1'>Masculino</option>
+                    <option value='0'>Femenino</option>
+                </select>
+            </div>
+        </div>
+
+        <div class='column'>
+            <h4>Factores de Riesgo</h4>
+            <div class='input-group'>
+                <label for='SMOKING'>¿Es fumador?</label>
+                <select name='SMOKING' required>
+                    <option value='1'>Sí</option>
+                    <option value='0'>No</option>
+                </select>
+            </div>
+            <div class='input-group'>
+                <label for='ALCOHOL_CONSUMING'>¿Consume alcohol?</label>
+                <select name='ALCOHOL_CONSUMING' required>
+                    <option value='1'>Sí</option>
+                    <option value='0'>No</option>
+                </select>
+            </div>
+            <div class='input-group'>
+                <label for='PEER_PRESSURE'>¿Cede ante la presión social?</label>
+                <select name='PEER_PRESSURE' required>
+                    <option value='1'>Sí</option>
+                    <option value='0'>No</option>
+                </select>
+            </div>
+            <div class='input-group'>
+                <label for='ANXIETY'>¿Padece de ansiedad?</label>
+                <select name='ANXIETY' required>
+                    <option value='1'>Sí</option>
+                    <option value='0'>No</option>
+                </select>
+            </div>
+            <div class='input-group'>
+                <label for='CHRONIC_DISEASE'>¿Padece alguna enfermedad crónica?</label>
+                <select name='CHRONIC_DISEASE' required>
+                    <option value='1'>Sí</option>
+                    <option value='0'>No</option>
+                </select>
+            </div>
+        </div>
+                    
+        <div class='column symptom-selects'>
+            <h4>Síntomas Reportados</h4>
+            
+            <select name='YELLOW_FINGERS' required>
+                <option value='' disabled selected>Dedos amarillos</option>
+                <option value='1'>Sí</option>
+                <option value='0'>No</option>
+            </select>
+            <select name='FATIGUE' required>
+                <option value='' disabled selected>Fatiga</option>
+                <option value='1'>Sí</option>
+                <option value='0'>No</option>
+            </select>
+            <select name='ALLERGY' required>
+                <option value='' disabled selected>Alergia</option>
+                <option value='1'>Sí</option>
+                <option value='0'>No</option>
+            </select>
+            <select name='WHEEZING' required>
+                <option value='' disabled selected>Sibilancias</option>
+                <option value='1'>Sí</option>
+                <option value='0'>No</option>
+            </select>
+            <select name='COUGHING' required>
+                <option value='' disabled selected>Tos</option>
+                <option value='1'>Sí</option>
+                <option value='0'>No</option>
+            </select>
+            <select name='SHORTNESS_OF_BREATH' required>
+                <option value='' disabled selected>Falta de aliento</option>
+                <option value='1'>Sí</option>
+                <option value='0'>No</option>
+            </select>
+            <select name='SWALLOWING_DIFFICULTY' required>
+                <option value='' disabled selected>Dificultad al tragar</option>
+                <option value='1'>Sí</option>
+                <option value='0'>No</option>
+            </select>
+            <select name='CHEST_PAIN' required>
+                <option value='' disabled selected>Dolor de pecho</option>
+                <option value='1'>Sí</option>
+                <option value='0'>No</option>
+            </select>
+        </div>
+    </div>
+
+    <div class='submit-area'>
+        <button type='submit' class='btn-submit'>Obtener predicción</button>
+    </div>
+    </form>
+
+    <hr class='result-separator'>
+
+    {% if result %}
+        <div id='resultado' class='result-box'>
+            <h4>Resultado de la predicción</h4>
+
+            <div class="alert-result {{ alert_class }}">
+                <strong>{{ result }}</strong>
+            </div>
+
+            <p class='result-description'>{{ description|safe }}</p>
+
+            <p class='probability-text'>
+                <strong>Probabilidad de riesgo: {{ probability }}%</strong>
+            </p>
+        </div>
+    {% endif %}
+
+</div>
+{% endblock %}
+
+<!-- ----------------------------------------------------------------------- -->

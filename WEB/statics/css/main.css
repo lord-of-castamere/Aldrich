@@ -15,9 +15,12 @@
 
 :root {
 
+    --main-color: #A69CAC;
+    --title-color: #735D78;
+
     /* Colores... */
     --text-color: #22212D;
-    --canvas-color: #FDFDFD;
+    --canvas-color: #F7F7F2;
     --background-color: #F6F8F8;
 
     --color-info: #81A4CD;
@@ -26,20 +29,9 @@
     --color-success: #798478;
 
     --state-idle: #CCDBDC;
-    --state-hover: #A5C4D4;
-    --state-active: #2596be;
-    --state-inactive: #C5CACB;
-
-    /* Tamaños... */
-    --sidebar-width-closed: 8rem;
-    --sidebar-width-open: 20rem;
-
-}
-
-.dark { /* Tema oscuro */
-    --text-color: #D4D3DE;
-    --canvas-color: #22212d;
-    --background-color: #181721;
+    --state-hover: #D1B3C4;
+    --state-active: #B392AC;
+    --state-inactive: #E8C2CA;
 }
 
 .justifiEd-text {
@@ -90,6 +82,10 @@ button {
 
 textarea {
     field-sizing: content;
+}
+
+input {
+    outline: none;
 }
 
 /* -------------------------------------------------------------------------- */

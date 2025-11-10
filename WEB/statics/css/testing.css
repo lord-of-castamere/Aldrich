@@ -1,0 +1,202 @@
+
+/* -- CSS ------------------------------------------------------------------- */
+
+.main-content {
+    flex-grow: 1; min-height: auto;
+    display: flex; flex-direction: column;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.main-header {
+    z-index: 1000;
+    position: sticky;
+    align-items: center;
+    top: 0; left: 0; height: 8rem;
+    display: flex; flex-direction: row;
+    background-color: var(--background-color);
+    box-shadow: 0 .5rem 3rem 1.5rem var(--background-color);
+}
+
+/* -------------------------------------------------------------------------- */
+
+.main-header-tittle h2 {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    padding: 1.4rem; margin-left: 2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.main-header-user-area {
+    margin-right: 2rem;
+    flex: content; display: flex; gap: 1rem;
+    align-items: center; justify-content: right;
+}
+
+.main-header-user-area strong {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.main-header-user-info span {
+    color: var(--main-color);
+}
+
+/* -------------------------------------------------------------------------- */
+
+.main-container, .main-header, .main-footer {
+    padding: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.main-container {
+    flex-grow: 1; padding-inline: 8rem;
+    view-transition-name: main-content-transition;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.main-footer {
+    text-align: center;
+    background-color: var(--canvas-color);
+}
+
+/* -------------------------------------------------------------------------- */
+
+.card-panel {
+    padding: 2rem;
+}
+
+.form-layout {
+    gap: 2.2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.column {
+    flex: 1; min-width: 18rem;
+}
+
+.column h4 {
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    padding-bottom: .4rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--state-idle);
+}
+
+/* -------------------------------------------------------------------------- */
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: .3rem;
+    color: var(--title-color);
+}
+
+input[type='number'], select {
+    width: 100%;
+    padding: .5rem;
+    border-radius: .25rem;
+    border: 1px solid var(--state-idle);
+    background-color: var(--canvas-color);
+}
+
+input[type='number']:focus, select:focus {
+    border-color: var(--state-hover);
+}
+        
+.symptom-selects select {
+    margin-bottom: .5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.submit-area {
+    text-align: center;
+    margin-top: 2.8rem;
+}
+
+.btn-submit {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .75rem 4rem;
+    border-radius: .25rem;
+    color: var(--title-color);
+    text-transform: uppercase;
+    background-color: var(--state-idle);
+    box-shadow: #11111A0D 0 .25rem 1rem, #11111A0D 0 .5rem 2rem;
+}
+
+.btn-submit:hover {
+    color: var(--text-color);
+    background-color: var(--state-hover);
+}
+
+/* -------------------------------------------------------------------------- */
+      
+.result-separator {
+    margin: 2.5rem 0;
+    border: 0; height: 1px;
+    background: var(--state-idle);
+}
+
+.result-box {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert-result {
+    padding: 1.2rem 4rem;
+    font-size: 1.4rem;
+    margin-top: 1.25rem;
+    border-radius: .5rem;
+    width: 75%;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.alert-positive {
+    color: var(--color-danger);
+    background-color: #F8D7DA;
+}
+
+.alert-positive strong {
+    color: var(--color-danger);
+}
+
+.alert-negative {
+    background-color: #D4EDDA;
+    color: var(--color-success);
+}
+
+.alert-negative strong {
+    color: var(--color-success);
+}
+
+.result-description {
+    width: 75%;
+    line-height: 1.5;
+    align-self: center;
+}
+
+.probability-text {
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: var(--main-color)
+}
+
+/* -------------------------------------------------------------------------- */

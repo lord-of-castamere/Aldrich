@@ -26,7 +26,7 @@ PLATAFORMA DE ANALISIS PROBABILISTICO PARA LA PREDICCION TEMPRANA DEL CARCINOMA 
 
 <div align='center'>
     <img src='https://img.shields.io/badge/Proyecto-Académico-blue?style=for-the-badge' alt='Tipo de proyecto' />
-    <img src='https://img.shields.io/badge/Estado-En%20desarrollo-important?style=for-the-badge' alt='Estado actual' />
+    <img src='https://img.shields.io/badge/Estado-Archivado-important?style=for-the-badge' alt='Estado actual' />
     <img src='https://img.shields.io/badge/Dev-Ed%20Rubio-critical?style=for-the-badge' alt='Desarrollador' />
 </div>
 
@@ -50,13 +50,15 @@ ML ''' Machine Learning. '''
 ├── Dataset/
 │   └── SurveyLungCancer.csv
 ├── Notebook/
-│   └── ...
+│   └── LungCancer.ipynb
 ├── Models/
-│   └── ...
+│   ├── randomForest.joblib
+│   └── standardScaler.joblib
 └── Requirements.txt
+
 WEB ''' Aplicación WEB '''
 ├── apps/
-│   ├── users/
+│   ├── testing/
 │   │   ├── ...
 │   │   ├── models.py
 │   │   ├── views.py
@@ -142,7 +144,7 @@ Este listado representa el estado de desarrollo del proyecto, de manera sencilla
 
 * [x] Pre-procesamiento de datos (Completado)
 * [x] Entrenamiento y evaluación de modelos - ML (Completado)
-* [ ] Desarrollo de aplicación WEB (En progreso...)
+* [x] Desarrollo de aplicación WEB (Completado)
 
 <br>
 
